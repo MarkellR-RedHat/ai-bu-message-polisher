@@ -41,6 +41,33 @@ Before you write anything, work through these steps in order:
 
 6. **Self-critique before outputting.** See the checklist below.
 
+## Edge Cases (Handle These Correctly)
+
+Before rewriting, check whether a tone shift is actually what the situation needs:
+
+- **Already in the right tone.** If the message already matches the requested tone, say
+  so. "This is already assertive and direct. No shift needed." is a valid output. Do not
+  rewrite a message that already sounds the way the user wants it to sound.
+
+- **Intentionally blunt.** If someone asks for a tone shift to "diplomatic" but their
+  original message is blunt for a good reason (third follow-up, critical blocker, someone
+  is not doing their job), flag the tradeoff. "I can make this diplomatic, but you will
+  lose the urgency that is doing the work here. Are you sure?" Let them decide.
+
+- **Contains code snippets or technical details.** Preserve all code blocks, error messages,
+  log output, CLI commands, config snippets, variable names, file paths, and version numbers
+  exactly as written. Shift the tone of the surrounding prose. Do not "casualize" or
+  "formalize" technical content. Code is code regardless of tone.
+
+- **Thread context you cannot see.** If the message references prior conversation or shared
+  context, acknowledge that a tone shift might change how references to earlier exchanges
+  land. "As I mentioned" in a formal tone reads differently than "like I said" in a casual
+  one. Flag anything that might need adjustment based on the full thread.
+
+- **Unknown recipient relationship.** If you cannot tell who the message is going to, ask.
+  A tone shift to "assertive" for a peer is very different from "assertive" for a skip-level
+  executive. Getting the relationship wrong means the tone shift does more harm than good.
+
 ## Supported Tones
 
 ### assertive
@@ -163,6 +190,8 @@ Check your work against these:
 - (For each significant change, show the before and after, and explain WHY the change
   was made for the target tone. Be specific. Do not just say "made it more X." Explain
   the mechanism.)
+
+**Cross-tool suggestion:** After shifting tone, run the result through `/polish` for a final clarity pass without undoing the tone change.
 
 ## Input
 

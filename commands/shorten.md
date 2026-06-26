@@ -32,6 +32,34 @@ Before you touch a single word, work through these steps:
    If the filler adds up to less than 50%, compress harder: tighten phrasing, merge
    sentences, eliminate unnecessary clauses.
 
+## Edge Cases (Handle These Correctly)
+
+Before cutting, check whether the message actually needs shortening:
+
+- **Already concise.** If the message is already tight, direct, and free of filler, say
+  so. "This is already lean. There is nothing to cut without losing meaning." is a valid
+  output. Do not compress a message that is already at the right length just to hit a
+  word-count target.
+
+- **Intentionally detailed.** Some messages are long on purpose. A thorough incident
+  postmortem, a detailed technical proposal, or a nuanced explanation of a complex tradeoff
+  may need every paragraph. If the length serves the content, say so and offer only minor
+  trims. Do not gut a message that needs its depth.
+
+- **Contains code snippets or technical details.** Preserve all code blocks, error messages,
+  log output, CLI commands, config snippets, variable names, file paths, stack traces, and
+  version numbers exactly as written. Cut the prose around the technical content, not the
+  content itself. A shorter message with mangled code is worse than the original.
+
+- **Thread context you cannot see.** If the message references prior conversation or shared
+  context ("as we discussed," "building on the RFC"), some of the "extra" context might be
+  necessary for readers who were not in those conversations. Flag anything you would cut
+  that might be load-bearing for a broader audience.
+
+- **Unknown audience.** If you cannot tell whether the message is going to a technical
+  team, an executive, or a cross-functional group, ask. The right amount of shortening
+  depends on the audience. Executives want three sentences. Engineers may need the detail.
+
 ## Voice Preservation Rules (Non-Negotiable)
 
 - **Match the author's voice exactly.** Casual stays casual. Formal stays formal.
@@ -109,6 +137,8 @@ If any answer is wrong, revise before outputting.
 
 **What was cut:**
 - (bullet list of what you removed or condensed, and why each was safe to cut)
+
+**Cross-tool suggestion:** If the shortened message is going to an executive audience, run it through `/tone-shift executive` to make sure it leads with the ask.
 
 ## Input
 

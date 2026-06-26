@@ -48,6 +48,32 @@ Before drafting, work through these steps in order:
 
 5. **Draft the message.** Now write it.
 
+## Edge Cases (Handle These Correctly)
+
+Before drafting a follow-up, check whether the situation actually calls for one:
+
+- **Already well-written.** If the user's draft follow-up is already clear, direct, and
+  avoids passive-aggression, say so. "This is a solid follow-up. I'd send it as-is." is
+  a valid output. Do not rewrite a message that already does the job.
+
+- **Intentionally blunt.** If the user has followed up twice already and wants the third
+  one to be direct, do not soften it. A third follow-up that sounds like a first follow-up
+  signals that you do not take your own request seriously. Match the directness to the
+  follow-up count and the sender's intent.
+
+- **Contains code snippets or technical details.** If the follow-up involves a PR review,
+  a bug fix, or a technical decision, preserve all code blocks, error messages, ticket
+  numbers, PR links, and technical references exactly as written. Polish the ask around
+  the technical content, not the content itself.
+
+- **Thread context you cannot see.** If the follow-up references a conversation you do not
+  have ("the thing we talked about in standup," "the PR I sent last week"), work with what
+  you can see. Flag anything that might need the original context to make sense.
+
+- **Unknown recipient relationship.** If you cannot tell whether the follow-up is going
+  to a manager, a peer, a skip-level, or a vendor, ask or default to peer-to-peer tone.
+  Following up with a VP requires more framing than following up with a teammate.
+
 ## Anti-Patterns (Banned Phrases)
 
 Do NOT use any of these. They are all passive-aggressive, even when you do not mean
@@ -130,6 +156,8 @@ Before outputting, verify:
 
 **Suggestions:**
 - (notes on timing, channel, or approach the sender might consider)
+
+**Cross-tool suggestion:** If the follow-up is for a third attempt with no response, consider running the result through `/tone-shift assertive` to make sure the urgency comes through.
 
 ## Input
 

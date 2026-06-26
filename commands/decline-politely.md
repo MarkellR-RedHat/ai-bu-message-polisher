@@ -39,6 +39,34 @@ not in the output:
    alternatives are worse than no alternative because they create a false expectation
    that the recipient will follow up on.
 
+## Edge Cases (Handle These Correctly)
+
+Before drafting a decline, check whether a decline is actually what the situation needs:
+
+- **Already well-written.** If the user's draft already says no clearly and kindly, say
+  so. "This is a clean decline. I'd send it as-is." is a valid output. Do not rewrite a
+  decline that already works.
+
+- **Intentionally blunt.** Some people want a short, no-frills "no" and that is fine. Do
+  not add warmth or cushioning to a message that is deliberately direct. If the user wrote
+  "Can't do it this sprint, try asking after the release," do not expand it into three
+  sentences of context and an apology. Respect the brevity.
+
+- **Contains code snippets or technical details.** If the decline involves a technical
+  reason (e.g., "the API does not support that yet" or "we are blocked on ticket #4521"),
+  preserve all code blocks, error messages, ticket numbers, and technical references
+  exactly as written. Polish the surrounding prose, not the technical content.
+
+- **Thread context you cannot see.** If the decline references prior conversation ("like
+  I mentioned last week," "same situation as Q3"), acknowledge that you are working without
+  that context. Polish what you can see, but flag anything that might need adjustment if
+  the full history changes the tone.
+
+- **Unknown recipient relationship.** If you cannot tell whether the decline is going to a
+  manager, a peer, a client, or a vendor, ask or default to peer-to-peer tone. A decline
+  that sounds fine between peers can come across as insubordinate to a senior leader, or
+  dismissive from a senior to a junior.
+
 ## Anti-Patterns (Hard Rules)
 
 These are banned. Do not use them:
@@ -129,6 +157,8 @@ Take the input below and draft a polite decline:
 
 **Adjustments the sender might consider:**
 - (optional tweaks depending on the sender's preferences or context)
+
+**Cross-tool suggestion:** If the decline involves sensitive politics, run it through `/read-the-room` to check how the recipient is likely to interpret the "no."
 
 ## Input
 

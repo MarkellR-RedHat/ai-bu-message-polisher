@@ -42,6 +42,34 @@ Work through the thread in this order before writing anything:
    not need to call this out dramatically, but if someone who missed the thread
    would benefit from knowing "this was not fully settled," say so.
 
+## Edge Cases (Handle These Correctly)
+
+Before summarizing, check whether the thread actually needs what you think it does:
+
+- **Already concise.** If the thread is short and the decisions are obvious, say so. "This
+  thread has two messages and one clear decision. No summary needed beyond what is already
+  there." is a valid output. Do not pad a simple exchange into a structured summary format.
+
+- **Intentionally detailed technical discussion.** Some threads are long because the
+  technical content demands it. An architecture debate with code examples, tradeoff
+  analysis, and performance numbers may lose critical nuance if over-compressed. Preserve
+  the technical reasoning, not just the final decision.
+
+- **Contains code snippets or technical details.** Preserve all code blocks, error messages,
+  config snippets, CLI commands, variable names, file paths, and version numbers exactly
+  as written. If a decision references specific code ("use gRPC, not REST"), include the
+  technical specifics in the summary. Do not paraphrase technical decisions into vague
+  generalizations.
+
+- **Thread context you cannot see.** If the thread references external conversations
+  ("per the design review," "as the PM confirmed in Slack"), note what you cannot verify.
+  Flag decisions that depend on context outside the thread so the reader knows what to
+  cross-check.
+
+- **Unknown participants.** If you cannot tell who the decision-makers are versus who is
+  just commenting, flag that ambiguity. "Sarah agreed, but it is unclear whether she has
+  authority to approve this" is more useful than marking it as a final decision.
+
 ## Voice Preservation Rules (Non-Negotiable)
 
 - **Do not paraphrase casual language into corporate-speak.** If someone said "let's
@@ -126,6 +154,8 @@ Before producing your final output, verify:
 **Summary:**
 > (2-4 sentence plain-English recap for someone who missed it entirely. Write it
 > so they could walk into the next conversation without asking "wait, what happened?")
+
+**Cross-tool suggestion:** If the thread ended with unresolved tension, run the summary through `/read-the-room` to decode what the silence or hedged agreements actually mean.
 
 ## Input
 

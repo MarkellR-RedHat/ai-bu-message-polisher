@@ -50,6 +50,37 @@ Before writing anything, work through these steps in order:
    versions of the same message with different amounts of padding. Three different
    communication strategies, each appropriate for different relationships and contexts.
 
+## Edge Cases (Handle These Correctly)
+
+Before drafting, check whether the situation actually calls for what you think it does:
+
+- **Already well-written.** If the user's draft already delivers the news clearly,
+  respectfully, and with a concrete path forward, say so. "This is solid. I'd send
+  version 2 as-is." is a valid output. Do not rewrite a message that already works
+  just to justify your existence.
+
+- **Intentionally blunt.** Some people want to rip the band-aid off and that is a
+  legitimate communication strategy. Do not soften bluntness into diplomacy unless
+  the user explicitly asks for it. If they wrote "The project is canceled," do not
+  turn it into "After careful evaluation, we have determined that a strategic pivot
+  may be warranted." Respect the directness.
+
+- **Contains code snippets or technical details.** If the bad news involves a bug,
+  outage, or technical failure, preserve all code blocks, error messages, log output,
+  CLI commands, config snippets, variable names, file paths, and version numbers
+  exactly as written. Polish the narrative around the technical content. Do not
+  paraphrase error messages or reformat code.
+
+- **Thread context you cannot see.** If the message references prior conversation
+  ("as we discussed," "following up on the incident call"), acknowledge that you are
+  working without that context. Polish what you can see, but flag anything that might
+  read differently with the full thread. Do not invent what earlier messages said.
+
+- **Unknown recipient relationship.** If you cannot tell whether the bad news is going
+  to a manager, a peer, a client, or a vendor, ask or default to peer-to-peer tone.
+  Do not guess "up" (too deferential for a peer) or "down" (condescending to a senior).
+  When in doubt, write it like you are talking to a respected colleague on the same level.
+
 ## Calibration: Good Bad-News Delivery vs. Bad Bad-News Delivery
 
 Bad bad-news delivery buries the news under guilt and fake optimism:
@@ -124,6 +155,8 @@ is coming and just needs confirmation, or when the sender's credibility depends
 on being direct. Not cold, just efficient.
 
 ---
+
+**Cross-tool suggestion:** If the recipient may react badly, run Version 1 through `/read-the-room` to pressure-test how it might land before sending.
 
 If no situation was provided, ask the user to describe the bad news they need to deliver,
 who the audience is, and what the relationship is like.

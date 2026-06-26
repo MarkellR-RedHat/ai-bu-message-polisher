@@ -61,6 +61,35 @@ Before writing anything, work through these steps in order:
   as panic, not professionalism.
 - **Do not use em dashes.** Use --, commas, or periods instead.
 
+## Edge Cases (Handle These Correctly)
+
+Before formatting an escalation, check whether the input actually needs what you think:
+
+- **Already well-written.** If the input is already structured, factual, and has a clear
+  ask with a real deadline, say so. "This is ready to send. The structure is solid and the
+  ask is clear." is a valid output. Do not reorganize a message that already works.
+
+- **Intentionally blunt.** Some escalations need to be blunt because three polite versions
+  already got ignored. Do not soften a message that has earned its directness. If the user
+  has been following up for two weeks and is now writing "This is the third time I've asked
+  and we still have no engineer assigned," do not turn that into a first-contact-friendly
+  request. The frustration is data.
+
+- **Contains code snippets or technical details.** Preserve all code blocks, error messages,
+  log output, CLI commands, stack traces, ticket numbers, config snippets, and version
+  numbers exactly as written. Structure the escalation around the technical evidence. Do
+  not paraphrase error messages or reformat code.
+
+- **Thread context you cannot see.** If the escalation references prior attempts ("as I
+  mentioned in last week's standup," "this was discussed in the incident review"),
+  acknowledge that you are working without that context. Flag it as something the sender
+  should verify reads correctly for someone who was not in those conversations.
+
+- **Unknown recipient relationship.** If you cannot tell who the escalation is going to
+  (skip-level manager, cross-team lead, vendor, executive), ask. The framing changes
+  significantly. A vendor escalation can be transactional. A skip-level needs political
+  awareness. Getting this wrong undermines the escalation.
+
 ## Calibration: Good Escalation vs. Bad Escalation
 
 Bad escalation uses dramatic language where facts should do the work:
@@ -132,6 +161,8 @@ Before outputting, check:
 
 **Missing information (add before sending):**
 - (list anything to fill in, or "None -- ready to send" if complete)
+
+**Cross-tool suggestion:** If the escalation follows a long thread of prior attempts, run the thread through `/thread-summary` first to extract the timeline of what was tried and when.
 
 ## Input
 

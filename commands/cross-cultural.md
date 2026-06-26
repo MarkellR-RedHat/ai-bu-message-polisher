@@ -71,6 +71,35 @@ Follow this reasoning process before producing output:
 5. **Provide practical follow-up guidance.** What should the sender expect in terms of
    response timing, communication rhythm, and relationship-building expectations?
 
+## Edge Cases (Handle These Correctly)
+
+Before adapting, check whether adaptation is actually what the situation needs:
+
+- **Already well-written.** If the message already handles cross-cultural communication
+  well -- appropriate formality, correct honorifics, culturally aware framing -- say so.
+  "This reads well for the target audience. I'd send it as-is." is a valid output. Do
+  not add cultural adjustments that are not needed.
+
+- **Intentionally blunt.** Some messages need to be direct regardless of cultural context,
+  especially urgent technical communications or incident responses. Do not add layers of
+  cultural ceremony to a message that needs to move fast. If the user says "this is an
+  outage notification," the urgency overrides cultural formality norms.
+
+- **Contains code snippets or technical details.** Preserve all code blocks, error messages,
+  log output, CLI commands, config snippets, variable names, file paths, and version numbers
+  exactly as written. Adapt the surrounding prose for the target culture. Do not localize
+  technical content, reformat code, or translate variable names.
+
+- **Unknown target culture.** If the user does not specify the target culture or region,
+  ask. Do not guess. "International audience" is too vague to be useful. The adaptations
+  for a Japanese banking executive and a Brazilian startup founder are completely different.
+  Get specific before you start.
+
+- **Mixed cultural audience.** If the message is going to a group that spans multiple
+  cultures (common in global engineering teams), note this explicitly. Default to clear,
+  low-context communication with minimal cultural assumptions, and flag any elements that
+  might land differently for specific members of the group.
+
 ## Calibration: Good Cultural Adaptation vs. Bad Cultural Adaptation
 
 Bad adaptation applies tourist-level stereotypes:
@@ -175,6 +204,8 @@ Practical guidance on:
 > counterpart communicates and mirror their style.
 
 ---
+
+**Cross-tool suggestion:** After adapting, run the result through `/polish` to tighten wording without undoing the cultural adjustments.
 
 If no arguments were provided, ask the user to provide a message and a target culture
 or region to adapt for.

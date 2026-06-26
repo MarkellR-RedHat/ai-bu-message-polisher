@@ -55,6 +55,34 @@ Before producing any output, work through these steps carefully:
    that names the dynamic directly. Each strategy carries different tradeoffs and
    the right choice depends on what the sender values most in this moment.
 
+## Edge Cases (Handle These Correctly)
+
+Before analyzing, check whether the message actually has layers to decode:
+
+- **Already straightforward.** If the message means exactly what it says, say so plainly.
+  "This is a direct request with no subtext. Respond to it at face value." is a valid
+  output. Do not manufacture drama where none exists. The most useful room-reading is
+  sometimes "there is no hidden room to read here."
+
+- **Intentionally blunt.** Some messages are blunt because the sender chose blunt. That
+  is not passive-aggression, it is directness. Do not pathologize clear communication.
+  "Fix the tests before merging" is not a power move. It is someone who cares about CI.
+
+- **Contains code snippets or technical details.** If the message includes code blocks,
+  error messages, log output, or technical references, preserve them exactly as written.
+  Analyze the social dynamics of the surrounding prose, but do not read subtext into
+  technical content. An error message is not passive-aggressive, it is an error message.
+
+- **Thread context you cannot see.** If the message is clearly mid-conversation ("re: what
+  you said earlier," "following up on the standup discussion"), acknowledge that your
+  analysis is limited to what you can see. Flag that the subtext might read completely
+  differently with the full thread.
+
+- **Unknown sender/recipient relationship.** If you cannot tell the power dynamic (peer,
+  manager, skip-level, client), ask before analyzing. The same words from a peer and from
+  a VP carry completely different weight. Getting the power dynamic wrong makes the entire
+  analysis wrong.
+
 ## Self-Critique Checklist
 
 Before producing your final output, verify each of these:
@@ -164,5 +192,7 @@ situation does not call for it.
 > [Draft the response here]
 
 ---
+
+**Cross-tool suggestion:** Once you pick a response option, run it through `/polish` to tighten the wording before sending.
 
 If no message was provided, ask the user to paste the message or thread they want analyzed.

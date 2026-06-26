@@ -202,6 +202,8 @@ If any answer is wrong, fix it before outputting.
 **What changed:**
 - (bullet list of the specific changes you made and why -- keep it brief)
 
+**Cross-tool suggestion:** If the polished message still feels too long, run it through `/shorten` for aggressive compression that preserves every decision and deadline.
+
 ## Input
 
 $ARGUMENTS
