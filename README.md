@@ -1,8 +1,10 @@
 # ai-bu-message-polisher
 
-Claude Code slash commands for workplace communication. Polish messages, decode subtext, deliver bad news, shorten essays into bullets, and shift tone on demand.
+You've been drafting this Slack message for 8 minutes. It's two sentences long. You just want it to sound right.
 
-No corporate fluff. No robot voice. Just tighter writing that still sounds like you.
+You know what you want to say. The problem is not the writing. The problem is the voice in your head asking "will this land wrong?" You worry about sounding too aggressive, too passive, too formal, too casual. You rewrite the same sentence three times and send the first version anyway. You agonize over escalation emails. You feel guilty about saying no. You overthink follow-ups until the window for following up has closed.
+
+This is a set of Claude Code slash commands for people who are good at their jobs but anxious about workplace communication. Not because they can't write, but because they care how their words affect people.
 
 ## What it does
 
@@ -10,22 +12,22 @@ Ten slash commands, organized by what you need:
 
 ### Core
 
-- `/polish` -- Take a rough message and make it land. Supports tone flags: `casual`, `formal`, `executive`, `urgent`, `technical`.
-- `/shorten` -- Ruthlessly cut a message by 50%+ while keeping every decision, deadline, and action item.
-- `/tone-shift` -- Rewrite a message in a completely different tone: assertive, diplomatic, casual, executive, empathetic, or technical. Shows side-by-side annotations of every change.
+- `/polish` -- Take a rough message and make it land. Preserves your voice -- the goal is "you on your best day," not a corporate template. Supports tone flags: `casual`, `formal`, `executive`, `urgent`, `technical`.
+- `/shorten` -- Cut a message by 50%+ while keeping every decision, deadline, and action item. Kills throat-clearing and hedge-stacking without killing personality.
+- `/tone-shift` -- Completely rewrite a message in a different tone: assertive, diplomatic, casual, executive, empathetic, or technical. Shows annotations explaining every change.
 
 ### Respond
 
-- `/read-the-room` -- Paste a message someone sent you. Get back: what they actually mean, what they want from you, how urgent it really is, and 2-3 response options at different levels of directness.
-- `/decline-politely` -- Draft a professional decline that actually says no. No hedging, no "unfortunately," no fake alternatives.
-- `/follow-up` -- Write a follow-up for something that went unanswered. Direct and easy to respond to, never passive-aggressive.
-- `/bad-news` -- Craft a message delivering bad news using the BIFF framework. Get three versions (soft landing, straight shooter, band-aid rip) so you can pick your level.
+- `/read-the-room` -- Paste a message someone sent you. Get back: what they actually mean, what they want from you, how urgent it really is, and 2-3 response options using genuinely different strategies.
+- `/decline-politely` -- Say no without hedging, without "unfortunately," and without fake alternatives. Clear, kind, and short.
+- `/follow-up` -- Write a follow-up that makes responding easy instead of guilt-inducing. No "gentle reminders." No "just bumping this."
+- `/bad-news` -- Deliver bad news using the BIFF framework. Three versions (soft landing, straight shooter, band-aid rip) so you can pick your level.
 
 ### Structure
 
-- `/escalation` -- Take a rough description of a problem and format it as a structured escalation email that gets action.
+- `/escalation` -- Turn a rough problem description into a structured escalation email that a busy executive can act on in 30 seconds.
 - `/thread-summary` -- Summarize a long Slack or email thread into decisions, action items, and open questions.
-- `/cross-cultural` -- Adapt a message for a different communication culture or region. Adjusts directness, formality, context-setting, and flags what might land wrong.
+- `/cross-cultural` -- Adapt a message for a different communication culture. Not surface-level tips, but real depth on how directness, formality, hierarchy, and context-setting differ across cultures.
 
 ### Reference
 
@@ -45,7 +47,7 @@ Then restart Claude Code.
 
 ### Read the room
 
-Someone sends you a message and you're not sure what they really want. Paste it into `/read-the-room`.
+Someone sends you a message and you can't tell if it's a casual check-in or a passive-aggressive escalation. Paste it into `/read-the-room`.
 
 ```
 /read-the-room Hey, wanted to check in on the API integration timeline. The product team has been asking me about it and I told them I'd get back to them by EOD. No rush on your end, just want to make sure we're aligned on next steps.
@@ -54,10 +56,10 @@ Someone sends you a message and you're not sure what they really want. Paste it 
 **Result:**
 
 > **What They Said:**
-> Checking in on the API integration timeline, product team is asking, wants to align on next steps.
+> Checking in on the API timeline, product team is asking, wants to align.
 >
 > **What They Actually Mean:**
-> This is not a casual check-in. "Product team has been asking me" means they're getting pressure from above. "I told them I'd get back to them by EOD" means they need your answer today, not eventually. "No rush on your end" directly contradicts the EOD deadline they just mentioned -- they're softening a real ask.
+> This is not a casual check-in. "Product team has been asking me" means they're getting pressure from above. "I told them I'd get back to them by EOD" means they need your answer today, not eventually. "No rush on your end" directly contradicts the EOD deadline they just mentioned -- they're softening a real ask because they don't want to seem pushy. Decoded: "I need a timeline I can give the product team today. Please respond before end of day."
 >
 > **What They Want From You:**
 > A concrete timeline they can relay to the product team today. Not "we're working on it" -- an actual date or milestone.
@@ -65,15 +67,18 @@ Someone sends you a message and you're not sure what they really want. Paste it 
 > **Urgency Check:**
 > - Real urgency: High -- they have an EOD commitment to someone else.
 > - Performed urgency: Calm -- "no rush" language is deliberately understated.
-> - Gap: They're downplaying urgency to avoid seeming pushy, but this needs a same-day response.
+> - Gap: They're downplaying urgency to avoid seeming demanding, but this needs a same-day response.
 >
-> **Option 1 -- Diplomatic:**
+> **The Relationship Context:**
+> They are acting as a go-between under pressure from the product team. If you don't give them something to relay, they look bad. This is not about the API timeline -- it's about whether you're someone they can count on to help them look competent to their stakeholders.
+>
+> **Option 1 -- Relationship-First:**
 > > We're targeting end of next week for the initial integration. I'll put together a quick status update you can forward to the product team -- give me an hour.
 >
-> **Option 2 -- Direct:**
+> **Option 2 -- Clarity-First:**
 > > API integration is on track for July 3. Here's where we stand: [status]. That should give you what you need for the product team.
 >
-> **Option 3 -- Very Direct:**
+> **Option 3 -- Name the Dynamic:**
 > > Sounds like you need a timeline you can commit to externally. The honest answer is July 3, assuming no blockers on the auth piece. If that doesn't work for the product team, let's talk about what can be descoped.
 
 ### Polish a message
