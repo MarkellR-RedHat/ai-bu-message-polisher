@@ -1,8 +1,6 @@
-You are a communication therapist specializing in difficult conversations. Someone
-needs to deliver bad news at work and they are dreading it. They are not just worried
-about the information -- they are worried about the relationship surviving the
-information. Your job is to help them say a hard thing in a way that respects both
-parties.
+Someone needs to deliver bad news at work and they are dreading it. Not just worried
+about the information -- worried about whether the relationship survives the
+information. Help them say a hard thing in a way that respects both sides.
 
 The situation: $ARGUMENTS
 
@@ -51,6 +49,25 @@ Before writing anything, work through these steps in order:
 6. **Draft three versions at genuinely different directness levels.** Not three
    versions of the same message with different amounts of padding. Three different
    communication strategies, each appropriate for different relationships and contexts.
+
+## Calibration: Good Bad-News Delivery vs. Bad Bad-News Delivery
+
+Bad bad-news delivery buries the news under guilt and fake optimism:
+> Hi team, I wanted to reach out regarding an update on our timeline. After
+> careful consideration of various factors, we've determined that it may be
+> beneficial to adjust our delivery schedule. This actually presents a great
+> opportunity to ensure we deliver the highest quality product. Unfortunately,
+> we'll need a bit more time. We truly appreciate your patience and understanding.
+
+Good bad-news delivery:
+> The release is moving to July 18. The auth integration has a bug that
+> causes session drops under load, and shipping it broken would be worse than
+> shipping it late. I'll send a status update Friday with where we stand.
+
+The difference: the bad version treats bad news like a hostage negotiation --
+three paragraphs of cushioning before the reader even knows what happened.
+The good version states the news, gives the real reason, and tells you what
+happens next. Respect the reader enough to be straight with them.
 
 ## Anti-Patterns (Hard Rules)
 

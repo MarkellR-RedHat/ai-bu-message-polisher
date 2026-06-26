@@ -1,9 +1,7 @@
-You are a cross-cultural communication advisor. Someone needs to send a message to a
-colleague, client, or partner from a different cultural background, and they want to
-make sure it lands the way they intend. Your job is not just translation. It is helping
-them understand that the same words, structure, and tone carry completely different
-meanings in different cultures, and that real misunderstandings happen every day because
-of these gaps.
+Someone needs to send a message to a colleague, client, or partner from a different
+cultural background and wants to make sure it lands right. This is not translation.
+The same words, structure, and tone carry completely different meanings in different
+cultures, and real misunderstandings happen every day because of these gaps.
 
 The message and target culture/region to adapt for:
 
@@ -72,6 +70,31 @@ Follow this reasoning process before producing output:
 
 5. **Provide practical follow-up guidance.** What should the sender expect in terms of
    response timing, communication rhythm, and relationship-building expectations?
+
+## Calibration: Good Cultural Adaptation vs. Bad Cultural Adaptation
+
+Bad adaptation applies tourist-level stereotypes:
+
+Original (to a Japanese colleague):
+> Hey, can we move the standup to 3pm? Conflicts with another meeting.
+
+Bad adaptation:
+> Most Honorable Tanaka-sama, I humbly request your gracious consideration
+> of a schedule adjustment. With deepest respect for your valuable time,
+> perhaps we might explore the possibility of convening at 3pm. I bow to
+> your wisdom in this matter.
+
+Good adaptation:
+> Tanaka-san, I have a scheduling conflict with the current standup time.
+> Would 3pm work for the team? I am happy to adjust if another time is
+> more convenient for everyone.
+
+The difference: the bad version is a caricature. It treats "Japanese
+business culture" as a single exaggerated mode. The good version makes
+real adjustments -- uses the appropriate honorific, frames the change as
+a team decision rather than unilateral, and opens space for the
+recipient to propose alternatives (important in consensus-oriented
+contexts). The adjustments are practical, not theatrical.
 
 ## Self-Critique Checklist
 

@@ -1,12 +1,9 @@
-You are a communication therapist. Someone sent a message or made a request and did not
-get a response. Now they need to follow up, and they are overthinking it. They do not
-want to be annoying. They do not want to sound passive-aggressive. They do not want to
-seem impatient. But they also need an answer.
+Someone sent a message, did not get a response, and is now overthinking the follow-up.
+They do not want to be annoying or passive-aggressive. But they need an answer.
 
-Here is the thing most people do not realize: a good follow-up is actually a gift to the
-recipient. It reminds them of something they probably forgot, gives them everything they
-need to respond quickly, and does not make them feel bad about the delay. The goal is to
-make responding to you the easiest thing in their inbox.
+A good follow-up is a gift to the recipient. It reminds them of something they
+probably forgot, gives them everything they need to respond quickly, and does not
+make them feel bad about the delay. Make responding the easiest thing in their inbox.
 
 ## How to Think (Chain of Thought)
 
@@ -69,6 +66,24 @@ them to be:
 
 If you catch yourself reaching for any of these, stop and rewrite. Say what you need
 and why it matters. Direct is kind. Passive-aggressive is not.
+
+## Calibration: Good Follow-Up vs. Bad Follow-Up
+
+Bad follow-up is passive-aggressive dressed up as politeness:
+> Hi! Just wanted to circle back and gently bump this to the top of your
+> inbox. I know you're super busy, but I was hoping you might have a moment
+> to take a look at this when you get a chance. Sorry to bother you! No rush
+> at all. Just a friendly reminder. :)
+
+Good follow-up:
+> Hey, following up on the auth service PR from last Wednesday. We need the
+> security review before the Tuesday release. Can someone pick it up this week?
+
+The difference: the bad version apologizes five times while being annoying
+once. It has no useful information and makes the reader work to figure out
+what you need. The good version re-states the request, explains why it
+matters now, and asks a clear question. Direct is kind. "Gentle reminders"
+are not.
 
 ## Voice Preservation Rules (Non-Negotiable)
 

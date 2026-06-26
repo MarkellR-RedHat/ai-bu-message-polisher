@@ -1,33 +1,33 @@
 # ai-bu-message-polisher
 
-You've been drafting this Slack message for 8 minutes. It's two sentences long. You just want it to sound right.
+You have been drafting this Slack message for 8 minutes. It is two sentences long. You just want it to sound right.
 
-You know what you want to say. The problem is not the writing. The problem is the voice in your head asking "will this land wrong?" You worry about sounding too aggressive, too passive, too formal, too casual. You rewrite the same sentence three times and send the first version anyway. You agonize over escalation emails. You feel guilty about saying no. You overthink follow-ups until the window for following up has closed.
+You know what you want to say. The problem is not the writing. The problem is the voice in your head asking "will this land wrong?" You rewrite the same sentence three times and send the first version anyway. You agonize over escalation emails. You feel guilty about saying no. You overthink follow-ups until the window for following up has closed.
 
-This is a set of Claude Code slash commands for people who are good at their jobs but anxious about workplace communication. Not because they can't write, but because they care how their words affect people.
+Ten Claude Code slash commands for people who are good at their jobs but overthink workplace communication. Not because they cannot write, but because they care how their words land.
 
 ## What it does
 
-Ten slash commands, organized by what you need:
+Organized by what you need:
 
 ### Core
 
-- `/polish` -- Take a rough message and make it land. Preserves your voice -- the goal is "you on your best day," not a corporate template. Supports tone flags: `casual`, `formal`, `executive`, `urgent`, `technical`.
-- `/shorten` -- Cut a message by 50%+ while keeping every decision, deadline, and action item. Kills throat-clearing and hedge-stacking without killing personality.
-- `/tone-shift` -- Completely rewrite a message in a different tone: assertive, diplomatic, casual, executive, empathetic, or technical. Shows annotations explaining every change.
+- `/polish` -- Take a rough message and make it land. You on your best day, not a corporate template. Tone flags: `casual`, `formal`, `executive`, `urgent`, `technical`.
+- `/shorten` -- Cut a message by 50%+ without losing decisions, deadlines, or action items. Kills throat-clearing and hedge-stacking, keeps personality.
+- `/tone-shift` -- Full rewrite in a different tone: assertive, diplomatic, casual, executive, empathetic, or technical. Annotates every change with the reasoning.
 
 ### Respond
 
-- `/read-the-room` -- Paste a message someone sent you. Get back: what they actually mean, what they want from you, how urgent it really is, and 2-3 response options using genuinely different strategies.
-- `/decline-politely` -- Say no without hedging, without "unfortunately," and without fake alternatives. Clear, kind, and short.
-- `/follow-up` -- Write a follow-up that makes responding easy instead of guilt-inducing. No "gentle reminders." No "just bumping this."
-- `/bad-news` -- Deliver bad news using the BIFF framework. Three versions (soft landing, straight shooter, band-aid rip) so you can pick your level.
+- `/read-the-room` -- Paste a message someone sent you. Get back what they actually mean, what they want, how urgent it really is, and 2-3 response options with genuinely different strategies.
+- `/decline-politely` -- Say no without hedging, without "unfortunately," without fake alternatives. Clear, kind, short.
+- `/follow-up` -- Write a follow-up that makes responding easy, not guilt-inducing. No "gentle reminders." No "just bumping this."
+- `/bad-news` -- Deliver bad news using the BIFF framework. Three versions at different directness levels so you pick your comfort zone.
 
 ### Structure
 
 - `/escalation` -- Turn a rough problem description into a structured escalation email that a busy executive can act on in 30 seconds.
 - `/thread-summary` -- Summarize a long Slack or email thread into decisions, action items, and open questions.
-- `/cross-cultural` -- Adapt a message for a different communication culture. Not surface-level tips, but real depth on how directness, formality, hierarchy, and context-setting differ across cultures.
+- `/cross-cultural` -- Adapt a message for a different communication culture. Real depth on how directness, formality, hierarchy, and context-setting differ, not tourist-level tips.
 
 ### Reference
 
@@ -274,11 +274,11 @@ Jake (Tuesday 10:15am): On it. Will have a doc by Thursday.
 
 ## How it works
 
-These are Claude Code custom slash commands. The install script copies the command files to `~/.claude/commands/` where Claude Code picks them up automatically. Each command uses `$ARGUMENTS` to accept your input directly after the slash command.
+Claude Code custom slash commands. The install script copies command files to `~/.claude/commands/` where Claude Code picks them up automatically. Each command uses `$ARGUMENTS` to accept your input directly after the slash command.
 
 ## Tone comparison
 
-Here is the same message polished in each supported tone, so you can see how the tone flags work.
+Same message, five tones. So you can see the difference is structural, not just word-swapping.
 
 **Original message:**
 

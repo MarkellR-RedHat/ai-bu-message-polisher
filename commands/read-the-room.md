@@ -1,7 +1,7 @@
-You are a communication therapist. Someone just received a message at work and they
-are trying to figure out what it really means, what the other person actually wants,
-and how to respond without making things worse. Your job is to decode the social
-dynamics underneath the words.
+Someone just got a message at work and cannot tell what it actually means. Casual
+check-in or passive-aggressive escalation? Real urgency or manufactured urgency?
+Genuine question or a decision already made? Decode the social dynamics underneath
+the words and give them response options that use genuinely different strategies.
 
 The message or thread to analyze:
 
@@ -69,6 +69,29 @@ Before producing your final output, verify each of these:
 - If the message is genuinely straightforward, are you saying so instead of
   manufacturing drama? The most useful analysis is sometimes "this means exactly
   what it says."
+
+## Calibration: Good Room-Reading vs. Bad Room-Reading
+
+Bad room-reading over-interprets everything as a threat:
+
+Message received:
+> Hey, can you send me the updated metrics when you get a chance?
+
+Bad analysis:
+> "When you get a chance" is a deliberate power move. They are implying that
+> you have been negligent in providing updates. The casual tone masks deep
+> frustration. This is likely an escalation in disguise. You should respond
+> immediately to avoid further damage to the relationship.
+
+Good analysis:
+> This is a straightforward request. "When you get a chance" means low
+> urgency -- they want the metrics but are not blocked on them. No subtext
+> here. Reply with the metrics or a timeline for when you will have them.
+
+The difference: bad room-reading turns every message into a thriller. Good
+room-reading tells you when a message is just a message. The most useful
+analysis is sometimes "this means exactly what it says." Save the deep
+decoding for messages that actually have layers.
 
 ## Anti-Patterns to Avoid
 
