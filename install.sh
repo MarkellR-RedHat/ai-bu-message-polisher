@@ -1,27 +1,38 @@
 #!/bin/bash
-# Install ai-bu-message-polisher commands into Claude Code
+# ------------------------------------------------------------------
+# ai-bu-message-polisher installer
+# Copies slash commands into ~/.claude/commands/
+# ------------------------------------------------------------------
 
 set -e
 
-# Colors
 GREEN='\033[0;32m'
+RED='\033[0;31m'
 BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
 BOLD='\033[1m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
 COMMANDS_DIR="$HOME/.claude/commands"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo ""
 echo -e "${BOLD}ai-bu-message-polisher${NC}"
-echo -e "${BLUE}Installing slash commands...${NC}"
+echo -e "${BLUE}Ten slash commands for people who overthink workplace messages.${NC}"
 echo ""
 
-mkdir -p "$COMMANDS_DIR"
+# Verify commands directory exists in the repo
+if [ ! -d "$SCRIPT_DIR/commands" ]; then
+  echo -e "${RED}Error:${NC} commands/ directory not found in $SCRIPT_DIR"
+  echo "Make sure you are running this from the cloned repository."
+  exit 1
+fi
 
-# Count commands for progress
-COMMAND_COUNT=0
+mkdir -p "$COMMANDS_DIR" || {
+  echo -e "${RED}Error:${NC} Could not create $COMMANDS_DIR"
+  exit 1
+}
+
 COMMANDS=(
   "polish"
   "shorten"
@@ -35,44 +46,31 @@ COMMANDS=(
   "cross-cultural"
 )
 
+INSTALLED=0
+FAILED=0
+
 for cmd in "${COMMANDS[@]}"; do
-  cp "$SCRIPT_DIR/commands/${cmd}.md" "$COMMANDS_DIR/${cmd}.md"
-  COMMAND_COUNT=$((COMMAND_COUNT + 1))
+  SRC="$SCRIPT_DIR/commands/${cmd}.md"
+  if [ ! -f "$SRC" ]; then
+    echo -e "  ${RED}missing${NC}  ${cmd}.md"
+    FAILED=$((FAILED + 1))
+    continue
+  fi
+  cp "$SRC" "$COMMANDS_DIR/${cmd}.md"
+  echo -e "  ${GREEN}installed${NC}  /${cmd}"
+  INSTALLED=$((INSTALLED + 1))
 done
 
-echo -e "${GREEN}Installed ${COMMAND_COUNT} commands:${NC}"
 echo ""
-echo -e "  ${BOLD}Core -- polish your own messages:${NC}"
-echo -e "  ${BOLD}/polish${NC}              Make a rough message land right (tone flags: casual, formal, executive, urgent, technical)"
-echo -e "  ${BOLD}/shorten${NC}             Cut 50%+ of the words, keep every decision and deadline"
-echo -e "  ${BOLD}/tone-shift${NC}          Full rewrite in a different tone (assertive, diplomatic, casual, executive, empathetic, technical)"
+
+if [ "$FAILED" -gt 0 ]; then
+  echo -e "${YELLOW}Warning:${NC} ${FAILED} command(s) could not be installed. Check that all .md files exist in commands/."
+  echo ""
+fi
+
+echo -e "${GREEN}${INSTALLED} commands installed.${NC}"
 echo ""
-echo -e "  ${BOLD}Respond -- handle messages from others:${NC}"
-echo -e "  ${BOLD}/read-the-room${NC}       Decode what someone's message actually means, get response options"
-echo -e "  ${BOLD}/decline-politely${NC}    Say no clearly without hedging or fake alternatives"
-echo -e "  ${BOLD}/follow-up${NC}           Follow up without being passive-aggressive"
-echo -e "  ${BOLD}/bad-news${NC}            Deliver bad news at three directness levels (BIFF framework)"
+echo -e "Restart Claude Code to pick up the new commands, then try:"
 echo ""
-echo -e "  ${BOLD}Structure -- organize complex communication:${NC}"
-echo -e "  ${BOLD}/escalation${NC}          Turn a problem into a structured escalation email that gets action"
-echo -e "  ${BOLD}/thread-summary${NC}      Distill a long thread into decisions, owners, open questions"
-echo -e "  ${BOLD}/cross-cultural${NC}      Adapt a message for a different communication culture"
-echo ""
-echo -e "${GREEN}Done.${NC} Restart Claude Code to pick up the new commands."
-echo ""
-echo -e "${YELLOW}Quick start:${NC}"
-echo -e "  Staring at a draft?              ${BOLD}/polish${NC} [paste your message]"
-echo -e "  Confused by someone's message?   ${BOLD}/read-the-room${NC} [paste their message]"
-echo -e "  Need to say no?                  ${BOLD}/decline-politely${NC} [describe the situation]"
-echo -e "  Delivering bad news?             ${BOLD}/bad-news${NC} [describe what happened]"
-echo -e "  Message too long?                ${BOLD}/shorten${NC} [paste your message]"
-echo ""
-echo -e "${YELLOW}Tips:${NC}"
-echo -e "  - Use ${BOLD}tone:executive${NC} or ${BOLD}tone:casual${NC} with /polish to shift formality"
-echo -e "  - Output sounds like you on a good day, not like a different person"
-echo -e "  - Chain commands: polish first, then shorten if it's still too long"
-echo ""
-echo -e "${YELLOW}Reference:${NC}"
-echo -e "  Communication frameworks guide: ${BOLD}reference/communication-frameworks.md${NC}"
-echo -e "  Covers BLUF, SCQA, Minto Pyramid, and BIFF with bad-to-good rewrites."
+echo -e "  ${BOLD}/polish${NC} [paste a message you have been staring at]"
 echo ""
