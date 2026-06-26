@@ -2,6 +2,8 @@
 
 **You know what you want to say. You just can't stop rewriting it.**
 
+## The problem
+
 You draft a two-sentence Slack message and spend eight minutes on it. You rewrite the same line three times and send the first version anyway. You agonize over escalation emails. You feel guilty about saying no. You overthink follow-ups until the window closes.
 
 This is not a writing problem. It is a confidence problem. These ten Claude Code slash commands give you back the time you lose to overthinking.
@@ -31,7 +33,7 @@ cd ai-bu-message-polisher
 bash install.sh
 ```
 
-Restart Claude Code. Then try:
+Restart Claude Code, then try:
 
 ```
 /polish [paste a message you've been staring at]
@@ -93,6 +95,25 @@ Run `/polish` with a tone flag and the difference is structural, not just word-s
 | `executive` | Root cause: missing database indexes. Fix requires DBA support and off-peak window. Requesting allocation. |
 | `urgent` | Missing indexes on three tables are causing the performance issue. We need a DBA to add them tonight or tomorrow. Who can take this? |
 | `technical` | Root cause: missing indexes on three tables in the backing database. `ALTER TABLE` requires table-level locks. Schedule during off-peak maintenance window. |
+
+## Workflow
+
+These commands work well chained together and alongside other tools in the suite.
+
+**Common chains within message-polisher:**
+
+- Draft a response with `/read-the-room`, then run the option you pick through `/polish` for a final pass.
+- Write a long update, run `/shorten` to cut it in half, then `/tone-shift executive` for a skip-level audience.
+- Use `/bad-news` to get three directness levels, pick one, then `/read-the-room` on your own draft to pressure-test how it will land.
+
+**Connections to other AI BU tools:**
+
+- After `/thread-summary` extracts decisions from a long thread, drop the summary into [`/meeting-notes`](https://github.com/MarkellR-RedHat/ai-bu-meeting-notes) to get structured action items with owners and deadlines.
+- Use [`/status-report`](https://github.com/MarkellR-RedHat/ai-bu-status-report) to generate the update, then `/polish executive` to tighten it for leadership.
+- Run [`/style-check`](https://github.com/MarkellR-RedHat/ai-bu-style-checker) before sending any external-facing message to catch product name and capitalization issues.
+- When `/escalation` produces a draft that references shipped work, pull specifics from [`/shipped-digest`](https://github.com/MarkellR-RedHat/ai-bu-shipped-digest) so your timeline is backed by real dates.
+
+**Real-world tip:** The highest-value daily pattern is `/read-the-room` on the first ambiguous message you get each morning. It takes 10 seconds and saves the 20 minutes you would have spent drafting a response that hedges in the wrong direction. After a week, you start reading subtext faster on your own.
 
 ## How it works
 
