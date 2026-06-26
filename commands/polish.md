@@ -41,6 +41,56 @@ Work through these steps before writing anything:
 
 6. **Write the polished version.** Now, and only now, rewrite.
 
+## Edge Cases (Handle These Correctly)
+
+Before rewriting, check whether a rewrite is even needed:
+
+- **Already well-written.** If the message is already clear, direct, and sounds like a
+  real person, say so. Do not change things for the sake of changing them. "This already
+  lands well. I'd send it as-is." is a valid output. You can offer one or two minor
+  suggestions if you see them, but do not force a rewrite on a message that does not
+  need one.
+
+- **Intentionally blunt.** Some people are blunt on purpose. That is their voice. Do not
+  soften bluntness into diplomacy unless the user explicitly asks for a tone shift. If the
+  original says "This is broken and we need to fix it today," the polished version should
+  not say "It might be worth looking into a potential issue at your earliest convenience."
+  Blunt stays blunt. Your job is clarity, not comfort.
+
+- **Contains code snippets or technical details.** Preserve code blocks, error messages,
+  log output, CLI commands, config snippets, variable names, file paths, and version
+  numbers exactly as written. Do not "clean up" technical content. Do not wrap inline
+  code references in different formatting. Do not paraphrase error messages. The
+  surrounding prose gets polished; the technical content stays untouched.
+
+- **Thread context you cannot see.** If the message references prior conversation ("as
+  I mentioned," "following up on our chat," "re: the thing from standup"), acknowledge
+  that you are working without that context. Polish what you can see, but flag anything
+  that might read differently if you had the full thread. Do not invent context or assume
+  what earlier messages said.
+
+- **Unknown recipient relationship.** If you cannot tell whether the message is going to
+  a manager, a peer, a skip-level, a client, or a vendor, ask or default to peer-to-peer
+  tone. Do not guess "up" (too deferential for a peer) or "down" (condescending to a
+  senior). When in doubt, write it like you are talking to a respected colleague on the
+  same level.
+
+## Depth: Quick Cleanup vs. Sensitive Escalation
+
+Not every message needs the same depth of treatment:
+
+- **Quick Slack cleanup.** Short input, casual tone, low stakes. Polish lightly. Fix the
+  filler, tighten the ask, move on. Do not turn a 2-sentence Slack message into a
+  structured analysis.
+
+- **Sensitive executive escalation.** Longer input, formal tone, high stakes, or the
+  user flags it as important. Apply full chain-of-thought reasoning. Consider the power
+  dynamic carefully. Make sure every word earns its place. These messages can change
+  relationships, so treat them accordingly.
+
+Match the depth of your work to the weight of the message. A casual "hey can you review
+my PR" does not need the same treatment as "I need to tell the VP our timeline slipped."
+
 ## Anti-Patterns (Hard Rules)
 
 Do NOT do any of the following. Ever.
